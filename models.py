@@ -47,4 +47,61 @@ class Player(BasePlayer):
     Q1_ans = models.IntegerField(initial=0)
     Question_1 = models.IntegerField(
         choices=[1,2,3,4,5,6,7,8],
+        label = '''
+            Your Choice 
+            '''
+                )
+    Question_2 = models.IntegerField(
+        choices=[1,2,3,4,5,6,7,8],
+        label = '''
+            Your Choice 
+            '''
+                )
+    Question_3 = models.IntegerField(
+        choices=[1,2,3,4,5,6,7,8],
+        label = '''
+            Your Choice 
+            '''
+                )
+    Question_4 = models.IntegerField(
+        choices=[1,2,3,4,5,6,7,8],
+        label = '''
+            Your Choice 
+            '''
+                )
+    Question_5 = models.IntegerField(
+        choices=[1,2,3,4,5,6,7,8],
+        label = '''
+            Your Choice 
+            '''
+                )
+    Question_6 = models.IntegerField(
+        choices=[1,2,3,4,5,6,7,8],
+        label = '''
+            Your Choice 
+            '''
+                )
+    Question_7 = models.IntegerField(
+        choices=[1,2,3,4,5,6,7,8],
+        label = '''
+            Your Choice 
+            '''
+                )
+    Question_8 = models.IntegerField(
+        choices=[1,2,3,4,5,6,7,8],
+        label = '''
+            Your Choice 
+            '''
+                )
+    Question_9 = models.IntegerField(
+        choices=[1,2,3,4,5,6,7,8],
+        label = '''
+            Your Choice 
+            '''
+                )
+    Question_10 = models.IntegerField(
+        choices=[1,2,3,4,5,6,7,8],
+        label = '''
+            Your Choice 
+            '''
                 )
