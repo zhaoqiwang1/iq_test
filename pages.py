@@ -150,4 +150,8 @@ class Question_10(Page):
 		  }
 	form_model = 'player'
 	form_fields = ['Question_10']
-page_sequence = [Question_1,Question_2, Question_3, Question_4, Question_5, Question_6, Question_7, Question_8, Question_9, Question_10]
+class Wait_final(WaitPage):
+    wait_for_all_groups = True
+    
+    after_all_players_arrive = 'set_rankings'
+page_sequence = [Question_1,Question_2, Question_3, Question_4, Question_5, Question_6, Question_7, Question_8, Question_9, Question_10, Wait_final]
