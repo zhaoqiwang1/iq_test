@@ -6,7 +6,7 @@ from .models import Constants
 class Question_1(Page):
   
 	def vars_for_template(self):
-	    Q_url = '/static/iq_test/sample_{{}}/sample_{{}}/Q_1.png'.format(self.player.test_number)
+	    Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_1.png'.format(index = self.player.test_num)
 
 	    return {
 	      	'Q': Q_url
