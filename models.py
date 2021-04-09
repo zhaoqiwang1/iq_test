@@ -56,17 +56,14 @@ class Subsession(markets_models.Subsession):
         for player in self.get_players():
             rank.append(player)
 
-        rank.sort(reverse = True, key = lambda x: x.score)
-
+        rank.sort(reverse = True, key = lambda x: x.score) 
         n=1
-
         for i in range(len(rank)):
-            if i>0 and rank[i].score == rank[i-1].score:
-                rank[i].ranking = rank[i-1].ranking
-            else:
-                rank[i].ranking = n
+            rank[i].ranking = n
             n=n+1
-
+        for p in self.get_players():
+            print(p)
+            p.set_global_rankings()
 class Group(BaseGroup):
     pass
 
@@ -86,6 +83,7 @@ class Player(BasePlayer):
     Q8_ans = models.IntegerField(initial=0)
     Q9_ans = models.IntegerField(initial=0)
     Q10_ans = models.IntegerField(initial=0)
+   
     Question_1 = models.IntegerField(
         choices=[1,2,3,4,5,6,7,8],
         label = '''
@@ -155,3 +153,5 @@ class Player(BasePlayer):
                 self.score += Constants.config['points'][i]
             i =i+1
         return self.score
+    def set_global_rankings(self):
+        self.participant.vars['ranking'] = self.ranking
