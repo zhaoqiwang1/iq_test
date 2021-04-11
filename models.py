@@ -62,7 +62,6 @@ class Subsession(markets_models.Subsession):
             rank[i].ranking = n
             n=n+1
         for p in self.get_players():
-            print(p)
             p.set_global_rankings()
 class Group(BaseGroup):
     pass

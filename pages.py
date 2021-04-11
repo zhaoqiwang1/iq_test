@@ -155,6 +155,7 @@ class Question_10(Page):
 class Done(Page):
 	def before_next_page(self):
 		self.player.save()
+		
 class Wait_final(WaitPage):
     wait_for_all_groups = True
     
