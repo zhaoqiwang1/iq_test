@@ -152,7 +152,7 @@ class Question_10(Page):
 		  }
 	form_model = 'player'
 	form_fields = ['Question_10']
-class Done(Page):
+class done(Page):
 	def before_next_page(self):
 		self.player.save()
 		
@@ -160,4 +160,4 @@ class Wait_final(WaitPage):
     wait_for_all_groups = True
     
     after_all_players_arrive = 'set_rankings'
-page_sequence = [welcome,Question_1,Question_2, Question_3, Question_4, Question_5, Question_6, Question_7, Question_8, Question_9, Question_10, Done, Wait_final]
+page_sequence = [welcome,Question_1,Question_2, Question_3, Question_4, Question_5, Question_6, Question_7, Question_8, Question_9, Question_10, done, Wait_final]
