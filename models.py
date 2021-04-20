@@ -59,19 +59,18 @@ class Subsession(markets_models.Subsession):
             rank.append(player)
         i = 0
         rand_num = np.random.choice(len(rank),size=(len(rank)),replace=False )
-        print(rand_num)
         for player in self.get_players():
             player.rand_id = rand_num[i]
-            print(player.rand_id)
             i=i+1
         
-        rank.sort(reverse = True, key = lambda x: x.score) 
-        rank.sort(reverse = True, key = lambda x: x.rand_id) 
+        rank.sort(reverse = True, key = lambda x: (x.score, x.rand_id))
+        print(rank)
 
         n=1
         for i in range(len(rank)):
             rank[i].ranking = n
             n=n+1
+            print(rank[i].score)
         for p in self.get_players():
             p.set_global_rankings()
 class Group(BaseGroup):
