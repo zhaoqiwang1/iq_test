@@ -12,7 +12,7 @@ class Question_1(Page):
 		if self.timeout_happened:
 			self.player.save()
 	def vars_for_template(self):
-		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_1.png'.format(index = self.player.test_num)
+		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_1.PNG'.format(index = self.player.test_num)
 
 		return {
 			'Q': Q_url
@@ -27,7 +27,7 @@ class Question_2(Page):
 		if self.timeout_happened:
 			self.player.save()
 	def vars_for_template(self):
-		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_2.png'.format(index = self.player.test_num)
+		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_2.PNG'.format(index = self.player.test_num)
 
 		return {
 			'Q': Q_url
@@ -42,7 +42,7 @@ class Question_3(Page):
 		if self.timeout_happened:
 			self.player.save()
 	def vars_for_template(self):
-		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_3.png'.format(index = self.player.test_num)
+		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_3.PNG'.format(index = self.player.test_num)
 
 		return {
 			'Q': Q_url
@@ -56,7 +56,7 @@ class Question_4(Page):
 		if self.timeout_happened:
 			self.player.save()
 	def vars_for_template(self):
-		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_4.png'.format(index = self.player.test_num)
+		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_4.PNG'.format(index = self.player.test_num)
 
 		return {
 			'Q': Q_url
@@ -71,7 +71,7 @@ class Question_5(Page):
 		if self.timeout_happened:
 			self.player.save()
 	def vars_for_template(self):
-		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_5.png'.format(index = self.player.test_num)
+		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_5.PNG'.format(index = self.player.test_num)
 
 		return {
 			'Q': Q_url
@@ -86,7 +86,7 @@ class Question_6(Page):
 		if self.timeout_happened:
 			self.player.save()
 	def vars_for_template(self):
-		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_6.png'.format(index = self.player.test_num)
+		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_6.PNG'.format(index = self.player.test_num)
 
 		return {
 			'Q': Q_url
@@ -100,7 +100,7 @@ class Question_7(Page):
 		if self.timeout_happened:
 			self.player.save()
 	def vars_for_template(self):
-		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_7.png'.format(index = self.player.test_num)
+		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_7.PNG'.format(index = self.player.test_num)
 
 		return {
 			'Q': Q_url
@@ -115,7 +115,7 @@ class Question_8(Page):
 		if self.timeout_happened:
 			self.player.save()
 	def vars_for_template(self):
-		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_8.png'.format(index = self.player.test_num)
+		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_8.PNG'.format(index = self.player.test_num)
 
 		return {
 			'Q': Q_url
@@ -130,7 +130,7 @@ class Question_9(Page):
 		if self.timeout_happened:
 			self.player.save()
 	def vars_for_template(self):
-		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_9.png'.format(index = self.player.test_num)
+		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_9.PNG'.format(index = self.player.test_num)
 
 		return {
 			'Q': Q_url
@@ -145,7 +145,7 @@ class Question_10(Page):
 		if self.timeout_happened:
 			self.player.save()
 	def vars_for_template(self):
-		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_10.png'.format(index = self.player.test_num)
+		Q_url = '/static/iq_test/sample_{index}/sample_{index}/Q_10.PNG'.format(index = self.player.test_num)
 
 		return {
 			'Q': Q_url
