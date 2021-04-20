@@ -11,6 +11,8 @@ from otree.api import (
 from otree_markets import models as markets_models
 from .configmanager import ConfigManager
 
+import random
+import numpy as np
 
 author = 'Your name here'
 
@@ -55,8 +57,17 @@ class Subsession(markets_models.Subsession):
         rank = []
         for player in self.get_players():
             rank.append(player)
-
+        i = 0
+        rand_num = np.random.choice(len(rank),size=(len(rank)),replace=False )
+        print(rand_num)
+        for player in self.get_players():
+            player.rand_id = rand_num[i]
+            print(player.rand_id)
+            i=i+1
+        
         rank.sort(reverse = True, key = lambda x: x.score) 
+        rank.sort(reverse = True, key = lambda x: x.rand_id) 
+
         n=1
         for i in range(len(rank)):
             rank[i].ranking = n
@@ -69,6 +80,7 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     
+    rand_id = models.IntegerField(initial=0)
     test_num = models.IntegerField(initial=0)
     score = models.FloatField(initial=0)
     ranking = models.IntegerField(initial=0)
