@@ -26,7 +26,7 @@ class Constants(BaseConstants):
     players_per_group = None
     num_rounds = 1
     config = {
-            'test_number': 4,
+            'test_number': 3,
             '1' : [2, 3, 3, 7, 5, 6, 4, 6, 7, 6] , 
             '2' : [6, 1, 2, 1, 7, 3, 4, 6, 5, 2],
             '3' : [3, 1, 3, 8, 2, 8, 8, 4, 5, 2], 
