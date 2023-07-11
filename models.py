@@ -8,7 +8,7 @@ from otree.api import (
     Currency as c,
     currency_range,
 )
-from otree_markets import models as markets_models
+#from otree_markets import models as markets_models
 from .configmanager import ConfigManager
 
 import random
@@ -27,13 +27,14 @@ class Constants(BaseConstants):
     num_rounds = 1
     config = {
             'test_number': 2,
-            '1' : [2, 3, 3, 7, 5, 6, 4, 1, 7, 6] , 
+            '1' : [2, 3, 3, 7, 5, 6, 4, 1, 7, 6], 
             '2' : [6, 1, 2, 1, 7, 3, 4, 6, 5, 2],
             '3' : [3, 1, 3, 8, 2, 8, 8, 8, 5, 2], 
             '4' : [4, 2, 5, 6, 4, 3, 4, 2, 1, 6],
             'points': [1,1.5,2,2.5,3,3.5,4,4.5,5,5.5]
      }
-class Subsession(markets_models.Subsession):
+#class Subsession(markets_models.Subsession):
+class Subsession(BaseSubsession):
 
     def creating_session(self):
         for player in self.get_players():
@@ -60,7 +61,7 @@ class Subsession(markets_models.Subsession):
         i = 0
         rand_num = np.random.choice(len(rank),size=(len(rank)),replace=False )
         for player in self.get_players():
-            player.rand_id = rand_num[i]
+            player.rand_id = int(rand_num[i])
             i=i+1
         
         rank.sort(reverse = True, key = lambda x: (x.score, x.rand_id))
@@ -73,6 +74,8 @@ class Subsession(markets_models.Subsession):
             print(rank[i].score)
         for p in self.get_players():
             p.set_global_rankings()
+
+
 class Group(BaseGroup):
     pass
 
@@ -165,3 +168,4 @@ class Player(BasePlayer):
         return self.score
     def set_global_rankings(self):
         self.participant.vars['ranking'] = self.ranking
+
